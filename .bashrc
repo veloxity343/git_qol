@@ -154,16 +154,16 @@ gu() {
 #---------------------------------------------------------
 
 update() {
-    if [ "$(uname)" = "Darwin" ]; then
-        echo "Updating Homebrew on macOS..."
-        brew update && brew upgrade && brew cleanup
-    elif [ "$(uname)" = "Linux" ]; then
-        echo "Updating APT packages on Linux..."
-        sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt clean
-    else
-        echo "Unsupported OS: $(uname)"
-        return 1
-    fi
+	if [ "$(uname)" = "Darwin" ]; then
+		echo "Updating Homebrew on macOS..."
+		brew update && brew upgrade && brew cleanup
+	elif [ "$(uname)" = "Linux" ]; then
+		echo "Updating APT packages on Linux..."
+		sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt clean
+	else
+		echo "Unsupported OS: $(uname)"
+		return 1
+	fi
 }
 
 up() {
