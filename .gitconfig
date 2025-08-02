@@ -1,0 +1,39 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Ryan Cheong
+	email = ryan.cheongtl@gmail.com
+
+[core]
+	pager = less -FRX
+	whitespace = trailing-space
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
+
+[status]
+	showUntrackedFiles = all
+
+[alias]
+	s = status -sb
+	a = add .
+	cm = commit -m
+	co = checkout
+	br = branch
+	hist = log --oneline --graph --decorate --all
+	last = log -1 HEAD
+	d = diff
+	ds = diff --staged
+	lg = log --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	root = rev-parse --show-toplevel
+
+[color]
+	ui = auto
+
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = red
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
