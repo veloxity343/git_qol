@@ -118,7 +118,7 @@ ga() {
 	if [ $# -gt 0 ]; then
 		commit_msg="$*"
 	else
-		read -p "${MAGENTA}Commit message: ${RESET}" commit_msg
+		read -ep "${MAGENTA}Commit message: ${RESET}" commit_msg
 		if [ -z "$commit_msg" ]; then
 			commit_msg="Generic auto-update"
 		fi
